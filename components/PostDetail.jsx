@@ -1,6 +1,5 @@
 import React from 'react'
 import moment from "moment"
-import Image from "next/image";
 
 const PostDetail = ({post}) => {
   console.log(post);
@@ -27,7 +26,7 @@ const PostDetail = ({post}) => {
         return <p key={index} className='mb-8'>{modifiedText.map((item,i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>
       case "img":
         return (
-          <Image src={obj.src} 
+          <img src={obj.src} 
             alt={obj.title}
             key={index}
             width={obj.width}
@@ -42,13 +41,13 @@ const PostDetail = ({post}) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 ">
       <div className="relative overflow-hidden shadow-md">
-        <Image src={post.featuredImage.url} alt={post.title}
+        <img src={post.featuredImage.url} alt={post.title}
         className="object-top h-full rounded-t-lg" layout="fill"/>
       </div>
       <div className="px4 lg:px-0">
         <div className="flex items-center mb-8 w-full">
           <div className="flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
-					<Image
+					<img
 						src={post.author.photo.url}
 						alt={post.author.name}
 						width="50px"
