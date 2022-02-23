@@ -10,7 +10,7 @@ export default function Categories() {
 		  .then((res) => setCategories(res));
 	}, []);
 	return (
-		<div className="bg-white rounded-lg shadow-lg pb-8 mb-8 mr-12">
+		<div className="bg-white rounded-lg shadow-lg pb-8 mb-8">
 			<h3 className="text-xl mb-8 font-semibold border-b py-4 pl-7">
 				Categories
 			</h3>

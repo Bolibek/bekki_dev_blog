@@ -15,7 +15,7 @@ export default function PostWidget({ slug, categories }) {
 
 	return (
 		
-	<div className='bg-white rounded-lg shadow-lg p-8 mb-8 mr-12'>
+	<div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
       <h3 className='text-xl mb-8 font-semibold border-b pb-4'>
         {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>

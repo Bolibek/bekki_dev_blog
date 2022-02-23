@@ -62,7 +62,12 @@ a {
   box-sizing: border-box;
 }
 
-// .related{
-//   display: flex;
-//   flex-direction: column;
-// }
+.single-arrow{
+  position: relative;
+  left: -57px;
+  bottom: 65px;
+}
+
+.arrow{
+  background-color: #0099ff;
+}
