@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import {Categories, PostWidget, PostDetail, Author, CommentsForm, Comments} from "../../components"
+import {Categories, PostWidget, PostDetail, Author, CommentsForm, Comments, Loader} from "../../components"
 import {getPostDetails, getPosts} from '../../services'
 const PostDetails = ({post}) => {
   const router = useRouter()

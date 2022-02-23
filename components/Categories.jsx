@@ -15,7 +15,7 @@ export default function Categories() {
 				Categories
 			</h3>
 			{categories.map((category) => (
-				<Link key={category.slug} href={`/category/${category.slug}`}>
+				<Link key={category.slug} href={`/category/${category.slug}`} passHref>
 					<span className="transition duration-200 cursor-pointer block pl-7 pb-3 mb3 text-indigo-900 hover:text-indigo-500">
             {category.name}
           </span>
