@@ -7,12 +7,18 @@ function Header() {
 		getCategories().then((res) => setCategories(res));
 	}, []);
 	return (
-		<div className="container mx-auto px-10 mb-8">
-			<div className="border-b w-full inline-block border-blue-500 py-8">
+		<div className=" bg-[#00121e] mx-auto  mb-8 border-b border-blue-500 ">
+			<div className="px-10 w-full inline-block py-4">
 				<div className="md:float-left block">
 					<Link href="/" passHref>
-						<span className="cursor-pointer font-bold text-4xl text-white">
-							Bekki_dev
+						<span className="cursor-pointer font-bold text-4xl text-white flex flex-row">
+							<img
+								src="https://img.icons8.com/external-sbts2018-solid-sbts2018/58/ffffff/external-developer-basic-ui-elements-2.2-sbts2018-solid-sbts2018.png"
+								// src="https://img.icons8.com/glyph-neue/64/ffffff/developer.png"
+								alt="logo"
+								className="w-9 h-8"
+							/>
+							<span className="ml-2">Bekki_dev</span>
 						</span>
 					</Link>
 				</div>

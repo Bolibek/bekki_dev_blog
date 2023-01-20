@@ -2,72 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  &:before{
-    content:'';
-    content: "";
-    width: 100%;
-    height: 100vh;
-    background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	&:before {
+		content: "";
+		content: "";
+		width: 100%;
+		height: 100vh;
+		background-color: #4d9271;
+		// background-image: linear-gradient(147deg, #000000 0%, #00121e 84%);
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 
-.text-shadow{
-  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+.text-shadow {
+	text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
 }
 
-.adjacent-post{
-  & .arrow-btn{
-    transition: width 300ms ease;
-    width: 50px;
-  }
-  &:hover{
-    & .arrow-btn{
-      width: 60px;
-    }
-  }
+.adjacent-post {
+	& .arrow-btn {
+		transition: width 300ms ease;
+		width: 50px;
+		height: 50px;
+	}
+	&:hover {
+		& .arrow-btn {
+			width: 60px;
+			height: 60px;
+		}
+	}
 }
 
 .react-multi-carousel-list {
-  & .arrow-btn{
-    transition: width 300ms ease;
-    width: 50px;
-    &:hover{
-      width: 60px;
-    }
-  }
-  
+	& .arrow-btn {
+		transition: width 300ms ease;
+		width: 50px;
+		height: 50px;
+		&:hover {
+			width: 60px;
+			height: 60px;
+		}
+	}
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.single-arrow{
-  position: relative;
-  left: -57px;
-  bottom: 65px;
+.single-arrow {
+	position: relative;
+	left: -57px;
+	bottom: 65px;
 }
 
-.arrow{
-  background-color: #0099ff;
+.arrow {
+	background-color: #0099ff;
 }
