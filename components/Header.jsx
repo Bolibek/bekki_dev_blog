@@ -7,7 +7,7 @@ function Header() {
 		getCategories().then((res) => setCategories(res));
 	}, []);
 	return (
-		<div className=" bg-[#00121e] mx-auto  mb-8 border-b border-blue-500 ">
+		<div className=" bg-[#00121e] mx-auto  mb-1 border-b border-blue-500 ">
 			<div className="px-10 w-full inline-block py-4">
 				<div className="md:float-left block">
 					<Link href="/" passHref>
