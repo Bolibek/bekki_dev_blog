@@ -2,40 +2,41 @@ import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { getFeaturedPosts } from "../services";
-import FeaturedPostCard from "../components/FeaturedPostCard";
+import FeaturedPostCard from "./FeaturedPostCard";
 
 const responsive = {
 	superLargeDesktop: {
-		breakpoint: { max: 4000, min: 1024 },
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
     items: 5
-	},
-	desktop: {
-		breakpoint: { max: 1024, min: 768 },
-		items: 3,
-	},
-	tablet: {
-		breakpoint: { max: 768, min: 640 },
-		items: 2,
-	},
-	mobile: {
-		breakpoint: { max: 640, min: 0 },
-		items: 1,
-	},
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
 };
 
-const FeaturedPosts = () => {
+const PostsCarousel = () => {
 	const [featuredPosts, setFeaturedPosts] = useState([]);
 	const [dataLoaded, setDataLoaded] = useState(false);
 	// console.log(featuredPosts)
 	useEffect(() => {
 		getFeaturedPosts().then((res) => {
-			setFeaturedPosts(res);
+			setFeaturedPosts(res, res);
 			setDataLoaded(true);
 		});
 	}, []);
 
 	const customLeftArrow = (
-		<div className="absolute arrow-btn left-0 text-center py-2 cursor-pointer bg-white rounded-full">
+		<div className="absolute arrow-btn left-2 top-28 text-center py-2 cursor-pointer bg-white rounded-full">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				className="h-6 text-indigo w-full"
@@ -54,10 +55,10 @@ const FeaturedPosts = () => {
 	);
 
 	const customRightArrow = (
-		<div className="absolute arrow-btn right-0 text-center py-2 cursor-pointer bg-white rounded-full">
+		<div className="absolute arrow-btn right-2 top-28 text-center py-2 cursor-pointer bg-white rounded-full">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				className="h-6 text-indigo w-full"
+				className=" h-6 text-indigo w-full"
 				fill="none"
 				viewBox="0 0 24 24"
 				stroke="currentColor"
@@ -73,24 +74,25 @@ const FeaturedPosts = () => {
 	);
 
 	return (
-		<div className="mb-8 container mx-auto">
+		<div className="mb-4 mx-auto">
+			<h1 className=" font-bold">Popular posts</h1>
 			<Carousel
 				showDots={true}
 				autoPlay={true}
-				autoPlaySpeed={3000}
-        infinite
+				autoPlaySpeed={44000}
+				infinite
 				customRightArrow={customRightArrow}
 				customLeftArrow={customLeftArrow}
 				responsive={responsive}
-				itemClass="px-4"
+				// itemClass="px-3"
 			>
 				{dataLoaded &&
 					featuredPosts.map((post, index) => (
 						<FeaturedPostCard key={index} post={post} />
-          ))}
+					))}
 			</Carousel>
 		</div>
 	);
 };
 
-export default FeaturedPosts;
+export default PostsCarousel;

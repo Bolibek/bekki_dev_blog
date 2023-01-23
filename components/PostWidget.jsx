@@ -13,7 +13,7 @@ export default function PostWidget({ slug, categories }) {
 		}
 	}, [slug]);
 	return (
-		<div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+		<div className="bg-white shadow-lg p-8 mb-8">
 			<h3 className="text-xl mb-8 font-semibold border-b pb-4">
 				{slug ? "Related Posts" : "Recent Posts"}
 			</h3>
@@ -23,9 +23,7 @@ export default function PostWidget({ slug, categories }) {
 						<img
 							src={post.featuredImage.url}
 							alt={post.title}
-							width="60px"
-							height="60px"
-							className="align-middle rounded-full object-cover"
+							className="align-middle w-10 h-10 rounded-full object-cover"
 						/>
 					</div>
 					<div className="transition duration-200 flex-grow ml-4 border-b text-indigo-800 hover:text-indigo-400">
