@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { getSinglePost } from "../services";
+// import { getSinglePost } from "../services";
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 
 const SinglePost = () => {
 	const [singlePost, setSinglePost] = useState([]);
-	useEffect(() => {
-		getSinglePost().then((res) => setSinglePost(res));
-	}, []);
+	// useEffect(() => {
+	// 	getSinglePost().then((res) => setSinglePost(res));
+	// }, []);
 
 	return (
 		<div>
-			{singlePost.map((post, index) => (
+			{/* {singlePost.map((post, index) => (
 				<div className="relative h-72" key={index}>
 					<div
 						className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72"
@@ -40,7 +40,7 @@ const SinglePost = () => {
 							</p>
 						</div>
 					</div>
-					<Link href={`/post/${post.slug}`}>
+					<Link href={`/post/${post.slug}`} passHref>
 						<div className="tranition duration-500 hover:-translate-x-1 hover:bg-indigo-900 hover:text-white absolute arrow-btn -left-6 top-20 mt-10 text-center py-3 px-3 cursor-pointer bg-white rounded-full">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const SinglePost = () => {
 						</div>
 					</Link>
 				</div>
-			))}
+			))} */}
 		</div>
 	);
 };

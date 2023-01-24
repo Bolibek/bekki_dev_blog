@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { getCategories } from "../services";
+import Image from "next/image";
+
+// import { getCategories } from "../services";
 function Header() {
 	const [categories, setCategories] = useState([]);
-	useEffect(() => {
-		getCategories().then((res) => setCategories(res));
-	}, []);
+	// useEffect(() => {
+	// 	getCategories().then((res) => setCategories(res));
+	// }, []);
 	return (
 		<div className=" bg-[#00121e] mx-auto  mb-1 border-b border-blue-500 ">
-			<div className="px-10 w-full inline-block py-4">
+			{/* <div className="px-10 w-full inline-block py-4">
 				<div className="md:float-left block">
 					<Link href="/" passHref>
 						<span className="cursor-pointer font-bold text-4xl text-white flex flex-row">
@@ -35,7 +37,7 @@ function Header() {
 						</Link>
 					))}
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }

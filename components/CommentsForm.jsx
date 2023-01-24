@@ -1,5 +1,5 @@
 import React,{ useState, useEffect, useRef} from 'react'
-import { submitComment } from '../services';
+// import { submitComment } from '../services';
 const CommentsForm = ({slug}) => {
   const [error, setError] = useState(false)
   const [localStorage, setLocalStorage] = useState(false);
@@ -27,18 +27,18 @@ const CommentsForm = ({slug}) => {
       window.localStorage.removeItem("name", name)
       window.localStorage.removeItem("email", email)
     }
-    submitComment(commentsObj)
-      .then(res => {
-        setShowSuccessMessage(true)
-        setTimeout(() => {
-          setShowSuccessMessage(false)
-        }, 3000)
-      })
+    // submitComment(commentsObj)
+    //   .then(res => {
+    //     setShowSuccessMessage(true)
+    //     setTimeout(() => {
+    //       setShowSuccessMessage(false)
+    //     }, 3000)
+    //   })
   }
 
   return (
     <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Comments</h3>
+      {/* <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Comments</h3>
       <div className='grid grid-cols-1 gap-4 pb-4'>
         <textarea 
           ref={commentEl}
@@ -78,7 +78,7 @@ const CommentsForm = ({slug}) => {
           >Post Comment</button>       
         {showSuccessMessage && <span className='font-semibold mt-2 text-green-500 text-xl float-right'>Comment submitted for review</span>}
       </div>
-      
+       */}
     </div>
   )
 }
