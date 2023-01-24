@@ -1,7 +1,8 @@
 import React from "react";
 import moment from "moment";
 
-const PostDetail = ({ post }) => {
+const PostDetail = () => {
+// const PostDetail = ({ post }) => {
 	const getContentFragment = (index, text, obj, type) => {
 		let modifiedText = text;
 
@@ -51,7 +52,7 @@ const PostDetail = ({ post }) => {
 
 	return (
 		<div className="bg-white rounded-lg shadow-lg lg:p-8 pb-12 mb-12">
-			<div className="relative overflow-hidden shadow-md mb-6">
+			{/* <div className="relative overflow-hidden shadow-md mb-6">
 				<img
 					src={post.featuredImage.url}
 					alt={post.title}
@@ -97,7 +98,7 @@ const PostDetail = ({ post }) => {
 					);
 					return getContentFragment(index, children, typeObj, typeObj.type);
 				})}
-			</div>
+			</div> */}
 		</div>
 	);
 };
