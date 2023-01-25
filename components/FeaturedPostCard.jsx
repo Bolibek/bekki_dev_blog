@@ -1,13 +1,12 @@
+import React from "react";
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const FeaturedPostCard = () => {
-// const FeaturedPostCard = ({ post }) => {
+const FeaturedPostCard = ({ post }) => {
 	return (
 		<div className="relative h-72  flex flex-col items-center ">
-			{/* <div
+			<div
 				className="absolute  bg-center bg-no-repeat bg-cover shadow-md w-full h-72"
 				style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
 			/>
@@ -44,7 +43,7 @@ const FeaturedPostCard = () => {
 			</div>
 			<Link href={`/post/${post.slug}`} passHref>
 				<span className="cursor-pointer absolute w-full h-full" />
-			</Link> */}
+			</Link>
 		</div>
 	);
 };
