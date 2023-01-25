@@ -1,17 +1,19 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
-const PostCard = () => {
-// const PostCard = ({ post }) => {
+// const PostCard = () => {
+const PostCard = ({ post }) => {
+	// console.log(post)
 	return (
 		<div className="w-full h-28 flex flex-row my-3  ">
 			<div className="relative">
-				{/* <div className={`w-40 `}>
+				<div className={`w-40 `}>
 					<img
 						src={post.featuredImage.url}
 						alt={post.title}
+						layout="fill"
 						className=" w-40 h-28  z-50"
 					/>
 				</div>
@@ -24,11 +26,11 @@ const PostCard = () => {
 				<h1 className="transition duration-700  mb-1 cursor-pointer hover:text-indigo-700 text-md font-semibold">
 					<Link href={`/post/${post.slug}`} passHref>{post.title}</Link>
 				</h1>
-				<p className=" text-[.65rem] leading-tight text-gray-700 font-normal"> */}
-					{/* {post.excerpt.length > 250
+				<p className=" text-[.65rem] leading-tight text-gray-700 font-normal">
+					{post.excerpt.length > 250
 						? post.excerpt.slice(0, 250).trim() + "..."
-						: post.excerpt} */}
-				{/* </p>
+						: post.excerpt}
+				</p>
 				<div className="absolute bottom-0 mb-1 ">
 					<div className=" flex flex-row">
 						<div className="flex mr-3 ">
@@ -77,7 +79,7 @@ const PostCard = () => {
 							</div>
 						</div>
 					</div>
-				</div> */}
+				</div>
 			</div>
 		</div>
 	);

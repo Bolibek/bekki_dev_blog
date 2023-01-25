@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-// import { getSinglePost } from "../services";
+import { getSinglePost } from "../services";
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 
 const SinglePost = () => {
 	const [singlePost, setSinglePost] = useState([]);
-	// useEffect(() => {
-	// 	getSinglePost().then((res) => setSinglePost(res));
-	// }, []);
-
+	useEffect(() => {
+		getSinglePost().then((res) => setSinglePost(res));
+	}, []);
+  // console.log(singlePost)
 	return (
 		<div>
-			{/* {singlePost.map((post, index) => (
+			{singlePost.map((post, index) => (
 				<div className="relative h-72" key={index}>
 					<div
 						className="absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72"
@@ -59,7 +59,7 @@ const SinglePost = () => {
 						</div>
 					</Link>
 				</div>
-			))} */}
+			))}
 		</div>
 	);
 };
